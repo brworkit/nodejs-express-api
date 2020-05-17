@@ -1,6 +1,7 @@
 # NodeJs Server Template
 
 ## Description
+
 A simple NodeJs template to help you prototype your rest service for study case or even to production. It uses minimum modules as possible and MongoDb as database.  
 
 ## Requirements
@@ -52,13 +53,19 @@ After you install MongoDb in your local machine make sure it is running, then yo
     $ npm i [to install all required modules]
 
 ## Usage
-    start server using: 
+
+Start server using: 
 
     $ node server.js or npm start (you choose)
 
 
 ## API
-
+    POST /users/registration
+    {
+	    "username": "username",
+	    "email": "user@domain.com",
+	    "password": "123456"
+    }
 
 ## Credits
     -
