@@ -1,7 +1,7 @@
 # NodeJs Server Template
 
 ## Description
-    - A simple NodeJs template to help you prototype your rest service for study case or even to production. 
+A simple NodeJs template to help you prototype your rest service for study case or even to production. 
 
 ## Requirements
 
