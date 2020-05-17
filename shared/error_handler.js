@@ -1,11 +1,12 @@
 module.exports = errorHandler;
 
 function errorHandler(err, req, res, next) {
+    console.log("errorHandler")
     
     console.log("err: " + err)
-    // console.log("req: " + req)
-    // console.log("res: " + res)
-    // console.log("next: " + next)
+    console.log("req: " + req)
+    console.log("res: " + res)
+    console.log("next: " + next)
 
     if (typeof (err) === 'string') {
         // custom application error

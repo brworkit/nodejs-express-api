@@ -13,7 +13,8 @@ router.delete('/:id', _delete);
   
 function authenticate(req, res, next) {
     userService.authenticate(req.body)
-        .then(user => user ? res.status(200).json({                        
+        .then(user => user ? 
+        res.status(200).json({                        
             token: user.token,
             expires: user.expires            
         }) : 
@@ -25,11 +26,16 @@ function authenticate(req, res, next) {
 
 function register(req, res, next) {
     userService.create(req.body)
-        .then(() => res.json({
-            message: "User registered with success",
+        .then(() =>        
+        res.status(201).json({
+            message: "Registration success",
             result: req.body
-        }))
-        .catch(err => next(err));
+        }))                
+        .catch(err => {            
+            res.status(400).json({ 
+                message: "Registration error" 
+            }) 
+        });
 }
 
 function getAll(req, res, next) {
