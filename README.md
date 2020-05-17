@@ -16,7 +16,9 @@ For development, you will only need Node.js and a node global package, installed
 - #### Node installation on Ubuntu
 
   You can install NodeJs and npm with apt install, using the following commands:
+      
       $ sudo apt install nodejs
+      
       $ sudo apt install npm
 
 - #### Other Operating Systems
