@@ -9,7 +9,7 @@ router.post('/registration', register);
 router.get('/forgot', forgot);
 router.get('/', getAll);
 router.put('/update', update);
-router.delete('/:email', _delete);
+router.delete('/:id', _delete);
 
 function authenticate(req, res, next) {
     userService.authenticate(req.body)
@@ -73,7 +73,7 @@ function update(req, res, next) {
 }
 
 function _delete(req, res, next) {
-    userService.delete(req.params.email)
+    userService.delete(req.params.id)
         .then(() => res.status(200).json({
             message: "User deleted"
         }))

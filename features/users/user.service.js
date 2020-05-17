@@ -70,6 +70,6 @@ async function update(userParam) {
     await user.save();
 }
  
-async function _delete(email) {
-    await User.findOneAndRemove({email: email});
+async function _delete(id) {
+    await User.findByIdAndDelete(id);
 }
