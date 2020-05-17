@@ -62,9 +62,31 @@ Start server using:
 ## API
 ### POST /users/registration
     {
-	    "username": "username",
-	    "email": "user@domain.com",
-	    "password": "123456"
+	    "username",
+	    "email",
+	    "password"
+    }
+### POST /users/authenticate
+    {	    
+	    "email",
+	    "password"
+    }
+### PUT /users/update
+    {	    
+	    "username",
+	    "email"
+    }
+### GET /users
+    {
+        "message": "Users found",
+        "result": [
+            {                
+                "id",
+                "username",
+                "email",
+                "created"                
+            }
+        ]
     }
 
 ## Credits
