@@ -5,7 +5,7 @@ mongoose.connect(config.connectionString, { useNewUrlParser: true, useUnifiedTop
 mongoose.Promise = global.Promise;
 mongoose.set('useCreateIndex', true);
 module.exports = {
-    User: require('../features/user/user.model')
+    User: require('../features/users/user.model')
 };
 
 

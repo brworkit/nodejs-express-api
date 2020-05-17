@@ -28,7 +28,7 @@ npm start
 APIs
 Auth Route
 Register
-POST /api/auth/register
+POST /api/auth/registration
 
 {
     username,
@@ -58,12 +58,12 @@ User Route
 APIs in user routes need admin's permission to process
 
 Check
-GET /api/user/list
+GET /api/users/list
 
 Description: retrieves all user list
 
 Assign Admin
-POST /api/user/assign-admin/:username
+POST /api/users/assign-admin/:username
 
 Description: assigns admin permission to the given user
 

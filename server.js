@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+
 const jwt = require('./shared/jwt');
 const errorHandler = require('./shared/error_handler');
 
@@ -17,10 +18,10 @@ app.use(jwt());
 app.use(errorHandler);
 
 // controllers
-const userController = require('./features/user/user.controller');
+const userController = require('./features/users/user.controller');
 
 // api routes
-app.use('/user', userController);
+app.use('/users', userController);
 
 // start server
 const port = process.env.NODE_ENV === 'production' ? 80 : 81;
