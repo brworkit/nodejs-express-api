@@ -60,20 +60,3 @@ After you install MongoDb in your local machine make sure it is running, then yo
 
 
 
-
-
-
-
-
-
-
-
-
-
-How to start using it:
-
-npm install -g nodemon  
-npm install express  
-npm install body-parser  
-npm install cors  
-npm install express-jwt  

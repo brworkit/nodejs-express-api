@@ -16,23 +16,23 @@ module.exports = {
 };
  
 async function authenticate({ email, password }) {
-    const user = {id: 1, email: "user@domain.com", name: "User Name"};
-    const { hash, ...userWithoutHash } = user;
-    const token = jwt.sign({ sub: user.id }, config.secret, { expiresIn: TOKEN_EXPIRE_MILLISECONDS });
-    return {
-        ...userWithoutHash,
-        token
-    }
-
-    // const user = await User.findOne({ email });
-    // if (user && bcrypt.compareSync(password, user.hash)) {
-    //     const { hash, ...userWithoutHash } = user.toObject();
-    //     const token = jwt.sign({ sub: user.id }, config.secret, { expiresIn: TOKEN_EXPIRE_MILLISECONDS });
-    //     return {
-    //         ...userWithoutHash,
-    //         token
-    //     };
+    // const user = {id: 1, email: "user@domain.com", name: "User Name"};
+    // const { hash, ...userWithoutHash } = user;
+    // const token = jwt.sign({ sub: user.id }, config.secret, { expiresIn: TOKEN_EXPIRE_MILLISECONDS });
+    // return {
+    //     ...userWithoutHash,
+    //     token
     // }
+
+    const user = await User.findOne({ email });
+    if (user && bcrypt.compareSync(password, user.hash)) {
+        const { hash, ...userWithoutHash } = user.toObject();
+        const token = jwt.sign({ sub: user.id }, config.secret, { expiresIn: TOKEN_EXPIRE_MILLISECONDS });
+        return {
+            ...userWithoutHash,
+            token
+        };
+    }
 }
 
 async function getAll() {

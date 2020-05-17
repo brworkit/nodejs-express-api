@@ -1,12 +1,11 @@
-
-/* MONGO DB CONNECTION EXAMPLE
-const config = require('../config.json');
 const mongoose = require('mongoose');
+const config = require('../config.json');
+
 mongoose.connect(config.connectionString);
 mongoose.Promise = global.Promise;
 module.exports = {
     User: require('../features/user/user.model')
-};*/
+};
 
 
 /* POSTGRES DB CONNECTION EXAMPLE */
