@@ -92,12 +92,10 @@ Start server using:
     {
         "message"
     }
-    
-## Credits
-    -
-        
+
 ## License
-    -
+    MIT License.
+    Copyright (c) 2020 brworkit.
 
 
 
