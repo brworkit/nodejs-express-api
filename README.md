@@ -94,8 +94,8 @@ Start server using:
     }
 
 ## License
-    MIT License.
-    Copyright (c) 2020 brworkit.
+    [MIT License.](https://opensource.org/licenses/MIT)    
+    Copyright (c) 2020 **brworkit**.
 
 
 
