@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 const config = require('../config.json');
 
-mongoose.connect(config.connectionString);
+mongoose.connect(config.connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.Promise = global.Promise;
+mongoose.set('useCreateIndex', true);
 module.exports = {
     User: require('../features/user/user.model')
 };

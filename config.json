@@ -1,4 +1,4 @@
 {
-    "connectionString": "mongodb://localhost:27017/nodeservice",
+    "connectionString": "mongodb://localhost:27017/nodejs-server-template",
     "secret": "JK-BTD#@@"
 }
