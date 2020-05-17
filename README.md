@@ -28,13 +28,6 @@ If the installation was successful, you should be able to run the following comm
 
     $ npm --version
 
-## Installation
-
-### Project
-    $ git clone https://github.com/brworkit/nodejs-server-template.git
-    $ cd nodejs-server-template
-    $ npm i [to install all required modules]
-
 ### MongoDb
 - #### Node installation on Windows
 
@@ -48,6 +41,13 @@ If the installation was successful, you should be able to run the following comm
       
 After you install MongoDb in your local machine make sure it is running, then you are ready!
 
+
+## Installation
+
+### Project
+    $ git clone https://github.com/brworkit/nodejs-server-template.git
+    $ cd nodejs-server-template
+    $ npm i [to install all required modules]
 
 ## Usage
     - 
