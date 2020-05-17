@@ -52,7 +52,10 @@ After you install MongoDb in your local machine make sure it is running, then yo
     $ npm i [to install all required modules]
 
 ## Usage
-    - 
+    start server using: 
+
+    $ node server.js
+    
 
 ## Credits
     -
