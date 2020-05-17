@@ -88,7 +88,11 @@ Start server using:
             }
         ]
     }
-
+### DELETE /users/:id
+    {
+        "message"
+    }
+    
 ## Credits
     -
         
