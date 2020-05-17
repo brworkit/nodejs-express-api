@@ -54,8 +54,11 @@ After you install MongoDb in your local machine make sure it is running, then yo
 ## Usage
     start server using: 
 
-    $ node server.js
-    
+    $ node server.js or npm start (you choose)
+
+
+## API
+
 
 ## Credits
     -
