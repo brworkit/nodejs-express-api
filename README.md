@@ -93,6 +93,9 @@ Start server using:
         "message"
     }
 
+## POSTMAN
+You can import the **NODEJS-SERVER-TEMPLATE.postman_collection.json** file into your postman to test API. 
+
 ## License
 [MIT License.](https://opensource.org/licenses/MIT)    
 Copyright (c) 2020 **brworkit**.
