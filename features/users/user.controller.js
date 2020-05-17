@@ -22,7 +22,7 @@ function authenticate(req, res, next) {
                 message: 'Email or password is incorrect'
             }))
         .catch(err => {
-            console.log({ err })
+            
             res.status(403).json({
                 message: "You can't"
             })
@@ -37,7 +37,7 @@ function register(req, res, next) {
                 result: req.body
             }))
         .catch(err => {
-            console.log({ err })
+            
             res.status(400).json({
                 message: "Registration error"
             })
@@ -46,17 +46,21 @@ function register(req, res, next) {
 
 function getAll(req, res, next) {
     userService.getAll()
-        .then(users => {
+        .then(users => users ?
             res.status(200).json({
                 message: "Users found",
                 result: users
             })
-        })
-        .catch(err =>{
-            console.log({ err })
+            :
             res.status(404).json({
                 message: "Users not found"
-            })}
+            }))
+        .catch(err => {
+            
+            res.status(404).json({
+                message: "Users not found"
+            })
+        }
         );
 }
 
@@ -64,7 +68,7 @@ function update(req, res, next) {
     userService.update(req.body)
         .then(() => res.status(400).json({ message: "User updated" }))
         .catch(err => {
-            console.log({ err })
+            
             res.status(400).json({
                 message: "User not updated"
             })

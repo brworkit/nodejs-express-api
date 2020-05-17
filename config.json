@@ -1,5 +1,5 @@
 {
     "connectionString": "mongodb://localhost:27017/nodejs-server-template",
     "secret": "JK-BTD#@@",
-    "JWTTokenExpiresIn": 3600
+    "tokenExpiresIn": 3600
 }

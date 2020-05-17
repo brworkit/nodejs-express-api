@@ -22,8 +22,8 @@ async function authenticate({ email, password }) {
 
     if (user && bcrypt.compareSync(password, user.hash)) {
         const { hash, ...userWithoutHash } = user.toObject();
-        const token = jwt.sign({ sub: user.email }, config.secret, { expiresIn: config.JWTTokenExpiresIn });
-        const expires = config.JWTTokenExpiresIn;
+        const token = jwt.sign({ sub: user.email }, config.secret, { expiresIn: config.tokenExpiresIn });
+        const expires = config.tokenExpiresIn;
         return {
             ...userWithoutHash,
             token,
@@ -32,7 +32,7 @@ async function authenticate({ email, password }) {
     }
 }
 
-async function getAll() {    
+async function getAll() {      
     return await User.find().select('-hash -__v');
 }
 
@@ -41,7 +41,7 @@ async function getByEmail(email) {
 }
 
 async function create(userParam) {
-    console.info({userParam})
+
     // validate
     if (await User.findOne({ username: userParam.email })) {
         throw 'Email "' + userParam.email + '" is already taken';
@@ -58,7 +58,7 @@ async function create(userParam) {
 }
 
 async function update(userParam) {
-    // console.log({userParam});
+    
     const user = await User.findOne({ email: userParam.email });
 
     // validate
