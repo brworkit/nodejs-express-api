@@ -1,7 +1,7 @@
 # NodeJs Server Template
 
 ## Description
-A simple NodeJs template to help you prototype your rest service for study case or even to production. 
+A simple NodeJs template to help you prototype your rest service for study case or even to production. It uses minimum modules as possible and MongoDb as database.  
 
 ## Requirements
 
@@ -29,9 +29,25 @@ If the installation was successful, you should be able to run the following comm
     $ npm --version
 
 ## Installation
+
+### Project
     $ git clone https://github.com/brworkit/nodejs-server-template.git
     $ cd nodejs-server-template
-    $ npm i 
+    $ npm i [to install all required modules]
+
+### MongoDb
+- #### Node installation on Windows
+
+  Just go on [official MongoDb Windows Install](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/) follow the instructions.
+
+- #### Node installation on Linux
+  Just go on [official MongoDb Linux Install](https://docs.mongodb.com/manual/administration/install-on-linux/) follow the instructions.
+
+- #### Node installation on Mac OS
+  Just go on [official MongoDb OS X Install](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/) follow the instructions.
+      
+After you install MongoDb in your local machine make sure it is running, then you are ready!
+
 
 ## Usage
     - 
