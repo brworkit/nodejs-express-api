@@ -60,7 +60,7 @@ Start server using:
 
 
 ## API
-    ***POST /users/registration***
+    ###POST /users/registration###
     {
 	    "username": "username",
 	    "email": "user@domain.com",
